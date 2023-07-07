@@ -5,6 +5,8 @@
 	"scripts": {
 		"dev": "vite dev --host",
 		"build": "vite build",
+		"send": "git add .; git commit -m \"Your commit message\"; git push origin main",
+		"get": "git pull origin main",
 		"preview": "vite preview",
 		"test": "pnpm run test:integration && pnpm run test:unit",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
