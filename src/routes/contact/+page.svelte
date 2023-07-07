@@ -1,0 +1,1 @@
+<div class="display justify-center text-center" id="1659014168453"><h1 style="margin-bottom:0;" class="size-38">Contact Us</h1> <p style="margin-top:0" class="size-18">Hardev Sir's IELTS, 20820, Street 24A, Ajit Road, Bathinda.<br>+91-8528723949<br></p> <p style="margin-top:0" class="size-18">Hssielts@Gmail.com</p></div>
