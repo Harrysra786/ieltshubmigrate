@@ -47,12 +47,12 @@
          <!-- Video 4 -->
          <div data-video="4" class="mt-12 mb-6" style="display: none;">
             <p class="mb-3 text-center bb s4">Thursday`s Class</p>
-        <div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><figure style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; margin-block-end: 0; margin-block-start: 0; margin-inline-start: 0; margin-inline-end: 0;" ><iframe id="pv_wT6p2Sqs" src="https://media.publit.io/file/W-3.1.html?player=onlinerec" scrolling="no" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; overflow:hidden;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe></figure></div></div>
+            <div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 50.7%;"><figure style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 50.7%; margin-block-end: 0; margin-block-start: 0; margin-inline-start: 0; margin-inline-end: 0;" ><iframe id="pv_tRQZWGLJ" src="https://media.publit.io/file/W-1.4.html?player=onlinerec" scrolling="no" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; overflow:hidden;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe></figure></div></div>
 
          <!-- Video 5 -->
          <div data-video="5" class="mt-12 mb-6" style="display: none;">
             <p class="mb-3 text-center bb s4">Friday`s Class</p>
-        <div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><figure style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; margin-block-end: 0; margin-block-start: 0; margin-inline-start: 0; margin-inline-end: 0;" ><iframe id="pv_wT6p2Sqs" src="https://media.publit.io/file/W-3.1.html?player=onlinerec" scrolling="no" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; overflow:hidden;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe></figure></div></div>
+            <div><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><figure style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; margin-block-end: 0; margin-block-start: 0; margin-inline-start: 0; margin-inline-end: 0;" ><iframe id="pv_3e33hXyp" src="https://media.publit.io/file/NewRecordngs/W-1.5.html?player=onlinerec" scrolling="no" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute; overflow:hidden;" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe></figure></div></div>
     
     </div>
 
