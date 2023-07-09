@@ -2,7 +2,6 @@
     import { onMount } from 'svelte';
     import { collection, getDocs, query, where } from 'firebase/firestore';
     import { firestore, auth } from '../../../lib/firebase';
-    import Bookpart from "../../../lib/components/cuecardbook.svelte";
   
     let purchased = false;
   
@@ -21,7 +20,7 @@
 
 
   
-  <Bookpart />
+  <style>.embed-container { position: fixed; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding: 0; overflow: hidden; width: 100%; max-width: 100%; z-index: 9999999;} .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://flipbooklets.com/pdfflipbooklets/the-big-book-of-speaking-part-1' style='border:0' allowfullscreen></iframe></div>
   
 
   {:else}

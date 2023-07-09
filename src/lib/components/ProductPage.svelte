@@ -15,8 +15,9 @@
     export let freesample;
     export let Format;
     export let Pages;
-    export let itemNumber;
+    export let Howmany;
     export let Language;
+    export let Ratings;
   
     onMount(() => {
       intlTelInput(document.querySelector('#mobile_code'), {
@@ -127,7 +128,8 @@
     
     <div class="flex items-center justify-evenly">
       
-      <p class="px-4 py-2 text-base font-semibold text-center"><span class="imgshadowed">💴</span> {price}</p>
+      <p class="px-4 py-2 text-base font-semibold text-center"><span class="flex items-center"><img src="/img/money.png" alt="emoji" class="w-8 h-8 mr-2"/> INR 300</span></p>
+
       <div class="border-l-[1px] border-black h-20"></div>
       <!-- svelte-ignore a11y-missing-attribute -->
       <p class="px-4 py-2 text-base font-semibold text-center"><img src="/img/Hardev Sir Avatar.png" class="w-6 rounded-full avatar online "> Hardev Singh</p>

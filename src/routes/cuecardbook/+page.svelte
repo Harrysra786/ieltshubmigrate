@@ -12,4 +12,10 @@ let productDescription = 'Say hello to your new IELTS best friend - the "Band 9 
   productImage='./../../../static/img/cuecardbook.png'
   productTitle='Band 9 Cue Card Answers - May-Aug 2023'
   productDescription={productDescription}
+  reesample=''
+  Format=' - Digital/Printable'
+  Pages=' - 163'
+  Howmany='💭 Cue Cards - 81'
+  Language= - English and Hindi'
+  Ratings='18 Ratings'
 />

@@ -1,8 +1,20 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
+import imagemin from 'vite-plugin-imagemin';
+
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit(),
+		imagemin({
+			gifsicle: {},
+			jpegtran: {},
+			optipng: {},
+			svgo: {}
+		})
+	],
+	
+	
 	build: {
 		assetsInclude: ['**/static/fonts/**/*']
 	},
