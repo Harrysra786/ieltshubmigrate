@@ -4,7 +4,7 @@
   import { onMount } from 'svelte';
   import { auth } from '../../lib/firebase';
 
-  let allowedEmails = ['sra.bathinda@gmail.com', 'hssielts@gmail.com', 'rrobin1995@yahoo.com', 'avneetlehal@yahoo.com', 'karanjeettsingh@gmail.com', 'amandeep261196@gmail.com', 'ramantoor91@gmail.com', 'bhupinder.bs635@gmail.com', 'arshkaur154@gmail.com', 'robin.chem92@gmail.com', 'nehak3896@gmail.com', 'arshdeepkaur0216@gmail.com', 'sehbazsingh0001@gmail.com', 'arshkaur154@gmail.com', 'Gagansuppal021@gmail.com'];
+  let allowedEmails = ['sra.bathinda@gmail.com', 'hssielts@gmail.com', 'rrobin1995@yahoo.com', 'avneetlehal@yahoo.com', 'karanjeettsingh@gmail.com', 'amandeep261196@gmail.com', 'ramantoor91@gmail.com', 'bhupinder.bs635@gmail.com', 'arshkaur154@gmail.com', 'robin.chem92@gmail.com', 'nehak3896@gmail.com', 'arshdeepkaur0216@gmail.com', 'sehbazsingh0001@gmail.com', 'arshkaur154@gmail.com', 'gagansuppal021@gmail.com'];
   
   let userHasAccess = false;
 
