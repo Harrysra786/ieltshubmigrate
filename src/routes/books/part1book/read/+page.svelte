@@ -1,14 +1,14 @@
 <script>
     import { onMount } from 'svelte';
     import { collection, getDocs, query, where } from 'firebase/firestore';
-    import { firestore, auth } from '../../../lib/firebase';
+    import { firestore, auth } from './../../../../lib/firebase';
   
     let purchased = false;
   
     onMount(async () => {
       auth.onAuthStateChanged(async (user) => {
         if (user) {
-          const q = query(collection(firestore, "purchases"), where("userId", "==", user.uid), where("product", "==", "cuecardbook"));
+          const q = query(collection(firestore, "purchases"), where("userId", "==", user.uid), where("product", "==", "part1book"));
           const querySnapshot = await getDocs(q);
           purchased = querySnapshot.size > 0;
         }

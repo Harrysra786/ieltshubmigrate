@@ -1,60 +1,94 @@
 <script>
-  let products = Array(2).fill({
-    title: '200 Essential Essays For IELTS',
-    imgUrl: 'img/Onlythebook2.png',
+    let products = Array(0).fill({
+      title: '200 Essential Essays For IELTS',
+      imgUrl: 'img/Onlythebook2.png',
+      route: 'samplebook',
+      attributes: [
+        { icon: '/img/icon1.png', text: 'IELTS Writing /' },
+        { icon: '/img/icon2.png', text: '210 Pages /' },
+        { icon: '/img/icon3.png', text: ' Lifetime Access' },
+      ],
+      rating: '⭐ 4.9 (15)',
+      price: '🧑🏼‍🎓₹50',
+    });
+  
+    products.push({
+    title: 'The Big Book of Ideas For IELTS Essays',
+    imgUrl: '/img/bookstore/ideasbook.jpg',
+    route: 'books/ideasbook',
     attributes: [
-      { icon: '✒️', text: 'IELTS Writing /' },
-      { icon: '📃', text: '210 Pages /' },
-      { icon: '📅', text: ' Lifetime Access' },
+      { icon: '/img/rupee (2).png', text: 'INR 299' },
+      { icon: '/img/star (1).png', text: '5.0 (2)' },
     ],
-    rating: '⭐ 4.9 (15)',
-    price: '🧑🏼‍🎓₹50',
   });
 
   products.push({
-  title: 'Grammar for IELTS',
-  imgUrl: '/img/bookcover2.png',
-  attributes: [
-    { icon: '🔖', text: 'Writing' },
-    { icon: '📚', text: '110 Pages' },
-    { icon: '⏰', text: 'Lifetime Access' },
-  ],
-  rating: '⭐ 4.8 (10)',
-  price: '🧑🏼‍🎓₹60',
-});
+    title: 'Functional Grammar for IELTS Task 2',
+    imgUrl: '/img/bookstore/grambook.jpg',
+    route: 'books/grambook',
+    attributes: [
+      { icon: '/img/rupee (2).png', text: 'INR 299' },
+      { icon: '/img/star (1).png', text: '0 (0)' },
+    ],
+  });
 
-</script>
+  products.push({
+    title: 'The Biggest Book of Speaking Part 1',
+    imgUrl: '/img/bookstore/part1book.jpg',
+    route: 'books/part1book',
+    attributes: [
+      { icon: '/img/rupee (2).png', text: 'INR 299' },
+      { icon: '/img/star (1).png', text: '4.9 (3)' },
+    ],
+  });
 
-<div class="product-card-grid px-10 max-w-[1300px]0">
-  {#each products as product}
-    <article class="grid m-3 border-black shadow-pop-br">
-      <a href="/samplebook">
-        <div class="flex justify-center font-mono">
-          <img src="{product.imgUrl}" alt="Book cover" class="w-full border-black border-x-[1px] border-t-[1px] rounded-t-lg">
-        </div>
-        <div class="border-black border-[1px] font-mono text-base text-center bg-white">
-          <header>
-            <h3 class="flex justify-center">{product.title}</h3>
-            <div class="flex border-y-[1px] border-black">
-              {#each product.attributes as attribute}
-                <h3 class="font-sans text-xs divide-black text-zinc-700">{attribute.icon} {attribute.text}</h3>
-              {/each}
-            </div>
-          </header>
-          
+  products.push({
+    title: 'Band 9 Cue Card Answers (May-Aug 2023)',
+    imgUrl: '/img/bookstore/cuecardbook.jpg',
+    route: 'books/cuecardbook',
+    attributes: [
+      { icon: '/img/rupee (2).png', text: 'INR 199' },
+      { icon: '/img/star (1).png', text: '4.7 (7)' },
+    ],
+  });
 
+  products.push({
+    title: '(Free) Language Booster Book',
+    imgUrl: '/img/bookstore/langbook.jpg',
+    route: 'books/langbook',
+    attributes: [
+      { icon: '/img/rupee (2).png', text: 'INR 1' },
+      { icon: '/img/star (1).png', text: '0 (0)' },
+    ],
+  });
 
-          <footer class="flex divide-x-[1px] divide-black static justify-around">
-            
-            <div class="w-full px-5 py-3 text-xs font-semibold text-center">⭐ 4.9 (15)</div> 
-            
-            <div class="w-full py-3 text-xs font-semibold text-center">🧑🏼‍🎓₹50</div>
-          
-          </footer>
-
-          
-        </div>
-      </a>
-    </article>
-  {/each}
-</div>
+  
+  
+  
+  </script>
+  
+  <div class="product-card-grid px-10 max-w-[1300px]">
+    {#each products as product}
+      <article class="grid m-3 border-black shadow-pop-br">
+        <a href="/{product.route}">
+          <div class="flex justify-center font-mono">
+            <img src="{product.imgUrl}" alt="Book cover" class="w-full border-black border-x-[1px] border-t-[1px] rounded-t-lg">
+          </div>
+          <div class="border-black border-r-black border-[1px] font-mono text-base text-center bg-white rounded-b-lg">
+            <header class="">
+              <div class="flex justify-center py-2 font-bold px-7">{product.title}</div>
+              <div class="flex border-y-[1px] border-t-black justify-evenly items-center pb-2 pt-3"> <!-- added items-center -->
+                {#each product.attributes as attribute}
+                  <div class="font-sans text-xs divide-black text-zinc-700">
+                    <img src="{attribute.icon}" alt="Icon" class="inline-block w-6 h-6 mb-2 mr-1 imgshadowed"> <!-- replaced emoji with img tag -->
+                   <p class="font-bold"> {attribute.text}</p>
+                  </div>
+                {/each}
+              </div>
+            </header>
+        
+        </a>
+      </article>
+    {/each}
+  </div>
+  
