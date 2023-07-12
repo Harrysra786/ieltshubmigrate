@@ -1,30 +1,31 @@
 <script>
-    import { onMount, onDestroy } from "svelte";
-    import { user } from "../lib/store";
-    import { signOut } from "firebase/auth";
-    import { auth } from "../lib/firebase";
-  
-    let showMenu = false;
-  
-    function handleClick() {
-      if (!$user) {
-        // Redirect to login page
-        window.location.href = "/loginregister"; // Replace with your login page URL
-      } else {
-        showMenu = !showMenu;
-      }
+  import { onMount, onDestroy } from "svelte";
+  import { user } from "../lib/store";
+  import { signOut } from "firebase/auth";
+  import { auth } from "../lib/firebase";
+
+  let showMenu = false;
+
+  function handleClick() {
+    if (!$user) {
+      // Open login/register modal
+      document.getElementById('loginModal').classList.add('modal-open');
+    } else {
+      showMenu = !showMenu;
     }
-  
-    function handleLogout() {
-      // Log out user
-      signOut(auth);
-    }
-  
-    function handleDashboard() {
-      // Redirect to dashboard page
-      window.location.href = "/dashboard"; // Replace with your dashboard page URL
-    }
-  </script>
+  }
+
+  function handleLogout() {
+    // Log out user
+    signOut(auth);
+  }
+
+  function handleDashboard() {
+    // Redirect to dashboard page
+    window.location.href = "/dashboard"; // Replace with your dashboard page URL
+  }
+</script>
+
   
   <style>
     .login-status {

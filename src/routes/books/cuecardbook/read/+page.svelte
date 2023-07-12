@@ -25,7 +25,7 @@
 
   {:else}
     <div>
-      <p class="mt-6 text-center fade-in">You have not purchased this course yet. Please <a class="p-4 mx-2 text-white rounded-md bg-neutral-800" href="/vidcoursebuy">buy the course</a> to access the content.</p>
+      <p class="mt-6 text-center fade-in">You have not purchased this course yet OR you are not logged in. Please <a class="p-4 mx-2 text-white rounded-md bg-neutral-800" href="/books/cuecardbook">buy the course</a> or log in to access the content.</p>
     </div>
   {/if}
   

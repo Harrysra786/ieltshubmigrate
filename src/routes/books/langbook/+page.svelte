@@ -1,18 +1,18 @@
 <script>
   import ProductPage from '../../../lib/components/ProductPage.svelte';
 
-let productDescription = 'Say hello to your new IELTS best friend - the "Band 9 Cue Card Answers - May-Aug 2023". This essential guide is designed just for IELTS aspirants like you, striving to make your preparation journey as smooth as a Sunday drive. <br><br> Instead of dreading what\'s around the corner, you\'ll be riding high on confidence with 81 examiner-chosen cue cards from May to August 2023 tucked under your arm. Imagine the cool comfort of knowing, there are no tricks or surprises waiting for you. <br><br> And here\'s where it gets even better. To ensure no stone goes unturned, we\'ve provided a Hindi translation for each sample answer, creating a bridge over any understanding gaps. Now you can tackle the IELTS exam with the assurance that you\'ve left no room unexplored. <br><br> Aim for the stars with the Band 9 score that\'s within your grasp. With our stable, reliable, and ultra-user-friendly guide, your dream score isn\'t just a pipe dream - it\'s a coming reality!<br><br> Guard your future against missed opportunities and take the steps towards your aspirations. Propel yourself towards your dreams, starting today. Bag your copy and start your victorious IELTS journey now!';
+let productDescription = 'Are you ready to elevate your English language skills to new heights? "Language Booster" is your ticket to mastering the art of writing and speaking English with confidence and flair. This unique guide, priced at an unbeatable INR 1, is a treasure trove of 600 English sentences, each presented at basic, intermediate, and expert levels. It\'s like having a personal language coach, guiding you step by step from the rudiments to the nuances of the English language.<br><br>Imagine the satisfaction of seeing your language skills evolve as you journey through the book. With each sentence, you\'ll learn how to make more effective word choices, apply grammar rules accurately, and infuse your writing with rich details. "Language Booster" is not just a book, it\'s a transformative learning experience that will empower you to communicate your thoughts and ideas more clearly and persuasively.<br><br>So, why wait? Grab your copy of "Language Booster" today and embark on an exciting journey of linguistic discovery. Whether you\'re a language learner starting from scratch, a student seeking to improve your academic writing, or a professional aiming to polish your communication skills, this book is your passport to a world of improved English. Get ready to boost your language skills and unlock your full potential.';
 </script>
 
 <ProductPage 
   productName='langbook'
   price='1'
-  redirectUrl='./read'
+  redirectUrl='./lngbook/read'
   productQuery='langbook'
-  productImage='./../../../../static/img/productpage/langbook.jpg'
-  productTitle='The Big Book of Ideas For IELTS Essays'
+  productImage='/img/productpage/langbook.jpg'
+  productTitle='Language Booster - Simple TO Better TO Best!'
   productDescription={productDescription}
-  freesample='./../../../../static/pdf/Language Booster - Free Sample.pdf'
+  freesample='/pdf/Language Booster - Free Sample.pdf'
   Format=' - Digital / Printable'
   Pages=' - 624'
   Howmanyitem='Units'
