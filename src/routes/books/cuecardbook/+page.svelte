@@ -7,7 +7,7 @@ let productDescription = 'Say hello to your new IELTS best friend - the "Band 9 
 <ProductPage 
   productName='cuecardbook'
   price='199'
-  redirectUrl='./read'
+  redirectUrl='./cuecardbook/read'
   productQuery='cuecardbook'
   productImage='/img/productpage/cuecardbook.jpg'
   productTitle='Band 9 Cue Card Answers - May-Aug 2023'

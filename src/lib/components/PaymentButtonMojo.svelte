@@ -1,7 +1,7 @@
 <script>
   import { onMount, createEventDispatcher } from 'svelte';
-  import { addPurchase } from '../purchaseService'; // import the function
-  import { auth } from '../firebase'; // import firebase auth
+  import { addPurchase } from './../purchaseService'; // import the function
+  import { auth } from './../firebase'; // import firebase auth
 
   export let productName = '';
   export let price = 0;
@@ -47,6 +47,7 @@ async function handlePayment() {
     console.error('Payment request failed', paymentRequest);
   }
 }
+
 </script>
 
-<button class="inline-flex items-center px-4 py-2 mb-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-sm bg-neutral-800 hover:bg-white hover:text-neutral-800 hover:border-neutral-800 focus:outline-none" on:click={handlePayment}>Pay INR {price}</button>
+<button class="inline-flex items-center px-4 py-2 mb-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-sm bg-neutral-800 hover:bg-white hover:text-neutral-800 hover:border-neutral-800 focus:outline-none" on:click={handlePayment}>Buy Now</button>

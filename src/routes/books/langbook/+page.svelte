@@ -7,7 +7,7 @@ let productDescription = 'Are you ready to elevate your English language skills 
 <ProductPage 
   productName='langbook'
   price='1'
-  redirectUrl='./lngbook/read'
+  redirectUrl='./langbook/read'
   productQuery='langbook'
   productImage='/img/productpage/langbook.jpg'
   productTitle='Language Booster - Simple TO Better TO Best!'

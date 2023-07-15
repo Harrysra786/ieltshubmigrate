@@ -4,7 +4,7 @@
     import intlTelInput from 'intl-tel-input';
     import 'intl-tel-input/build/css/intlTelInput.css';
     import { user } from '../store.js';
-    import PaymentButton from './PaymentButton.svelte';
+    import PaymentButton from './PaymentButtonMojo.svelte';
     import { signUp, signIn } from '../authService';
     export let productName;
     export let price;
@@ -82,7 +82,7 @@
       {:else}
       <button class="inline-flex items-center px-4 py-2 mb-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out border border-transparent rounded-sm bg-neutral-800 hover:bg-white hover:text-neutral-800 hover:border-neutral-800 focus:outline-none" type="button" on:click={() => document.getElementById('loginModal').classList.add('modal-open')}>Buy Now</button>
       <div class="modal" id="loginModal">
-        <div class="modal-box">
+        <div class="bg-white modal-box">
           <div class="relative flex items-center justify-center w-full mb-4">
           <!-- svelte-ignore a11y-missing-attribute -->
           <img
@@ -91,21 +91,20 @@
         />
       </div>
           <h2 class="mb-4 text-center text-md"><b>You need to be Logged In to buy!</b></h2>
-          <h2 class="text-center text-md">If you are already registered, you <b>only need to fill in the email and password to login.</b> If not registered, fill all fields and click register.</h2>
+          <h2 class="mb-6 text-center text-md">If you are already registered, you <b>only need to fill in the email and password to login.</b> If not registered, fill all fields and click register.</h2>
           <form class="space-y-4">
-            <input class="border-dashed input border-neutral-800" type="text" bind:value={firstName} placeholder="First Name">
-    <input class="border-dashed input border-neutral-800" type="text" bind:value={lastName} placeholder="Last Name">
+            <input class="text-black bg-white border-dashed input border-neutral-800" type="text" bind:value={firstName} placeholder="First Name">
+            <input class="text-black bg-white border-dashed input border-neutral-800" type="text" bind:value={lastName} placeholder="Last Name">
     
-    
-            <input class="border-dashed input border-neutral-800" type="email" bind:value={email} placeholder="Email">
-            <input class="border-dashed input border-neutral-800" type="password" bind:value={password} placeholder="Password">
-            <input id="mobile_code" class="self-center p-2 mb-4 border border-gray-300 rounded form-input" type="tel" bind:value={phone} placeholder="Phone Number" required />
+            <input class="text-black bg-white border-dashed input border-neutral-800" type="email" bind:value={email} placeholder="Email">
+            <input class="text-black bg-white border-dashed input border-neutral-800" type="password" bind:value={password} placeholder="Password">
+            <input id="mobile_code" class="self-center p-2 mb-4 text-black bg-white border border-gray-300 rounded form-input" type="tel" bind:value={phone} placeholder="Phone Number" required />
     
             <div class="flex justify-center space-x-4">
               <button class="bg-neutral-800 text-white py-2 px-6 border-2 border-black border-dashed rounded-sm transition duration-300 ease-in-out transform hover:bg-[#f4c64e] hover:text-neutral-800 hover:border-solid mb-4" type="button" on:click={handleLogin}>Login</button>
               <button class="bg-neutral-800 text-white py-2 px-6 border-2 border-black border-dashed rounded-sm transition duration-300 ease-in-out transform hover:bg-[#f4c64e] hover:text-neutral-800 hover:border-solid mb-4" type="button" on:click={handleRegister}>Register</button>
             </div>
-          </form>
+    </form>
         </div>
       </div>
     {/if}
@@ -169,18 +168,19 @@
       <h2 class="text-center text-md"><b>You need to be Logged In to buy!</b></h2>
       <h2 class="text-center text-md">If you are already registered, just fill in the email and password to login. If not registered, fill all fields and click register.</h2>
       <form class="space-y-4">
-        <input class="border-dashed input border-neutral-800" type="text" bind:value={firstName} placeholder="First Name">
-<input class="border-dashed input border-neutral-800" type="text" bind:value={lastName} placeholder="Last Name">
+        <input class="text-black bg-white border-dashed input border-neutral-800" type="text" bind:value={firstName} placeholder="First Name">
+        <input class="text-black bg-white border-dashed input border-neutral-800" type="text" bind:value={lastName} placeholder="Last Name">
 
-        <input class="border-dashed input border-neutral-800" type="email" bind:value={email} placeholder="Email">
-        <input class="border-dashed input border-neutral-800" type="password" bind:value={password} placeholder="Password">
-        <input id="mobile_code" class="self-center p-2 mb-4 border border-gray-300 rounded form-input" type="tel" bind:value={phone} placeholder="Phone Number" required />
+        <input class="text-black bg-white border-dashed input border-neutral-800" type="email" bind:value={email} placeholder="Email">
+        <input class="text-black bg-white border-dashed input border-neutral-800" type="password" bind:value={password} placeholder="Password">
+        <input id="mobile_code" class="self-center p-2 mb-4 text-black bg-white border border-gray-300 rounded form-input" type="tel" bind:value={phone} placeholder="Phone Number" required />
 
         <div class="flex justify-center space-x-4">
           <button class="bg-neutral-800 text-white py-2 px-6 border-2 border-black border-dashed rounded-sm transition duration-300 ease-in-out transform hover:bg-[#f4c64e] hover:text-neutral-800 hover:border-solid mb-4" type="button" on:click={handleLogin}>Login</button>
           <button class="bg-neutral-800 text-white py-2 px-6 border-2 border-black border-dashed rounded-sm transition duration-300 ease-in-out transform hover:bg-[#f4c64e] hover:text-neutral-800 hover:border-solid mb-4" type="button" on:click={handleRegister}>Register</button>
         </div>
-      </form>
+</form>
+
     </div>
   </div>
 {/if}</div>

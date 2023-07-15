@@ -9,7 +9,7 @@
     onMount(async () => {
       auth.onAuthStateChanged(async (user) => {
         if (user) {
-          const q = query(collection(firestore, "purchases"), where("userId", "==", user.uid), where("product", "==", "Ideas Book v2"));
+          const q = query(collection(firestore, "purchases"), where("userId", "==", user.uid), where("product", "==", "ideasbook"));
           const querySnapshot = await getDocs(q);
           purchased = querySnapshot.size > 0;
         }
