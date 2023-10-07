@@ -1,6 +1,6 @@
-import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, sendPasswordResetEmail, updatePassword as firebaseUpdatePassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged,  updatePassword as firebaseUpdatePassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore"; 
-import { auth, firestore } from "./firebase"; // your Firestore instance
+import { auth, firestore } from "$lib/firebase"; // your Firestore instance
 
 export const signUp = async (email, password, phone, firstName, lastName) => {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
@@ -26,4 +26,16 @@ export const updatePassword = (newPassword) => {
     return firebaseUpdatePassword(auth.currentUser, newPassword);
   }
   throw new Error("No user is currently signed in.");
+};
+
+export const checkUserAuthentication = () => {
+  return new Promise((resolve) => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        resolve(true);
+      } else {
+        resolve(false);
+      }
+    });
+  });
 };

@@ -1,5 +1,6 @@
 import { writable } from "svelte/store";
-
+export const essayTopic = writable('');
+export const essayNumber = writable(''); // add this line
 export const user = writable(null);
 export const roles = writable([]);
 // Add a new writable store for allowedEmails

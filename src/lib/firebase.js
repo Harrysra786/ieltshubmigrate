@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc as docRef, addDoc, updateDoc, deleteDoc, setDoc, getDoc } from "firebase/firestore";
+import { getStorage } from 'firebase/storage';
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
@@ -12,6 +13,10 @@ const firebaseConfig = {
     measurementId: "G-S7NV4G56ZS"
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const storage = getStorage(app);
 export const auth = getAuth(app);
 export const firestore = getFirestore(app);
+export const doc = docRef;
+export { addDoc, updateDoc, deleteDoc, setDoc, getDoc }; // Export the addDoc, updateDoc, deleteDoc, setDoc, and getDoc functions

@@ -1,10 +1,11 @@
 <script>
-    import Bookstorebanner from "../../lib/components/bookstorebanner.svelte";
-    import Bookslist from "../../lib/components/bookslist.svelte";
+    import Bookstore from "$lib/books/bookstore.svelte";
+  
   </script>
-
-
-<Bookstorebanner />
-<div class="mt-6">
-<Bookslist />
-</div>
+  <svelte:head>
+    <title>The IELTS Hub Exclusive Bookstore</title>
+    <meta name="description" content="Get your hands on our carefully crafted IELTS books – they're packed with straightforward, easy-to-follow instructions. Check out our cool collection of IELTS materials." />
+  </svelte:head>
+  
+    <Bookstore />
+  

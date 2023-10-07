@@ -1,6 +1,7 @@
 <script>
-  import Readbuy from "../../../lib/components/readingcoursebuy.svelte";
- 
-</script>
-
-<Readbuy />
+    import Acadecourseinfo from "$lib/courses/readingvideos.svelte";
+  
+  </script>
+  
+    <Acadecourseinfo />
+  
