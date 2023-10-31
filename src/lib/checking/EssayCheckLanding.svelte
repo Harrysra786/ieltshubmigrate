@@ -10,8 +10,8 @@
 
 	import { db, auth } from '$lib/firebase';
 	
-	let productName = 'Pack of 5 Essay Correction';
-	let price = 1;
+	let productName = 'Pack of 10 Essay Correction';
+	let price = 2500;
 	let couponCode = '';
 	let isCouponValid = false;
 	let discountedPrice = price;
@@ -114,12 +114,13 @@
 				The Most <b>Affordable</b> and <b>Detailed</b> Essay Correction Service. <u>Guaranteed!</u></h3>
 				<img class="block w-5 h-5" src="/img/Secure.svg" alt="clock" />
 			</div>
-			<div class="flex items-baseline justify-center mx-4">
-				<h1
+			<!-- 
+			<div class="flex items-baseline justify-center hidden mx-4">
+				<p
 					class="pr-2 mt-6 text-xs font-bold underline decoration-dashed underline-offset-[3px] decoration-red-700"
 				>
 					Limited Time Discount. Get 50% off! Use Coupon Code:
-				</h1>
+				</p>
 				<div
 					class="text-xs relative p-2 mt-2 bg-orange-100 border-2 border-dashed rounded border-neutral-600 max-w-[150px]"
 				>
@@ -133,6 +134,7 @@
 					XYDLS2023
 				</div>
 			</div>
+			Main section three steps -->
 			<div class="flex flex-col items-center justify-center w-full mb-4 space-y-2">
 				<!-- Main section three steps -->
 				<section class="flex items-center justify-center mt-9">
@@ -141,9 +143,9 @@
 					>
 						<!-- Title -->
 						<p class="text-xs text-center">The best essay correction</p>
-						<h1 class="mb-6 text-lg font-black tracking-tighter text-center">
+						<p class="mb-6 text-lg font-black tracking-tighter text-center">
 							Is Just 3 Easy Steps Away!
-						</h1>
+						</p>
 
 						<div
 							class="flex flex-col lg:flex-row max-w-[800px] px-6 justify-center items-center lg:items-start"
@@ -152,7 +154,7 @@
 							<div
 								class="flex flex-col p-3 border border-solid rounded-md border-neutral-800 lg:max-w-[190px]"
 							>
-								<h1 class="text-sm font-bold tracking-tighter text-center">Select The Topic</h1>
+								<p class="text-sm font-bold tracking-tighter text-center">Select The Topic</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/selectit.svg"
@@ -172,7 +174,7 @@
 							<div
 								class="flex flex-col p-3 border border-solid rounded-md border-neutral-800 lg:max-w-[190px]"
 							>
-								<h1 class="text-sm font-bold tracking-tighter text-center">Write and Submit</h1>
+								<p class="text-sm font-bold tracking-tighter text-center">Write and Submit</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/writeit.svg"
@@ -192,7 +194,7 @@
 							<div
 								class="flex flex-col p-3 border border-solid rounded-md border-neutral-800 lg:max-w-[190px]"
 							>
-								<h1 class="text-sm font-bold tracking-tighter text-center">Get The Feedback</h1>
+								<p class="text-sm font-bold tracking-tighter text-center">Get The Feedback</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/submitit.svg"
@@ -220,9 +222,9 @@
 					>
 						<!-- Title -->
 						<p class="pt-2 text-xs text-center">Here is what each one of</p>
-						<h1 class="mb-6 text-lg font-black tracking-tighter text-center">
+						<p class="mb-6 text-lg font-black tracking-tighter text-center">
 							The Essay Feedbacks Includes!
-						</h1>
+						</p>
 
 						<div
 							class="flex flex-col max-w-[400px] px-6 justify-center items-center"
@@ -231,9 +233,9 @@
 							<div
 								class="flex flex-col w-full p-3 border border-solid rounded-md border-neutral-800"
 							>
-								<h1 class="mt-3 text-xs font-bold tracking-tighter text-center">
+								<p class="mt-3 text-xs font-bold tracking-tighter text-center">
 									All Grammar & Vocabulary Issues
-								</h1>
+								</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/grammedit.svg"
@@ -251,9 +253,9 @@
 							<div
 								class="flex flex-col w-full p-3 border border-solid rounded-md border-neutral-800"
 							>
-								<h1 class="mt-3 text-xs font-bold tracking-tighter text-center">
+								<p class="mt-3 text-xs font-bold tracking-tighter text-center">
 									Issues related to relevance and flow
-								</h1>
+								</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/flowedit.svg"
@@ -272,9 +274,9 @@
 							<div
 								class="flex flex-col w-full p-3 border border-solid rounded-md border-neutral-800"
 							>
-								<h1 class="mt-3 text-xs font-bold tracking-tighter text-center">
+								<p class="mt-3 text-xs font-bold tracking-tighter text-center">
 									Detailed Marking Criteria Score
-								</h1>
+								</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/markedit.svg"
@@ -293,9 +295,9 @@
 							<div
 								class="flex flex-col w-full p-3 border border-solid rounded-md border-neutral-800"
 							>
-								<h1 class="mt-3 text-xs font-bold tracking-tighter text-center">
+								<p class="mt-3 text-xs font-bold tracking-tighter text-center">
 									An Improved Re-write Of Your Essay
-								</h1>
+								</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/improvedit.svg"
@@ -316,9 +318,9 @@
 							<div
 								class="flex flex-col w-full p-3 border border-solid rounded-md border-neutral-800"
 							>
-								<h1 class="mt-3 text-xs font-bold tracking-tighter text-center">
+								<p class="mt-3 text-xs font-bold tracking-tighter text-center">
 									A Band 7 and Band 9 Sample Answer
-								</h1>
+								</p>
 								<img
 									class="block w-20 h-20 mx-auto mb-4 imgshadowed"
 									src="/img/Samples.svg"
@@ -347,7 +349,7 @@
 				<a
 					href="https://wa.me/+918528723949?text=Hi%2C%20Sir.%20I%20need%20some%20more%20information%20about%20your%20essay%20correction%20service."
 					class="text-[#ecd4d48] transition duration-150 ease-in-out font-sans font-bold text-lg flex justify-center cursor-pointer"
-					><img src="/img/WhatsappChat.svg" class="w-32 cursor-pointer imgshadowed" /></a
+					><img src="/img/WhatsappChat.svg" class="w-32 cursor-pointer imgshadowed" alt="Clickable image of a WhatsApp chat icon" /></a
 				>
 			</div>
 			<div class="px-4 mt-2" />
@@ -363,7 +365,7 @@
 			>
 				<div class="flex flex-row items-baseline self-center pt-3">
 					<img class="block mx-auto mr-2 w-7 h-7 -scale-x-100" src="/img/CreditCard.svg" alt="clock" />
-					<h1 class="mb-4 text-base font-bold tracking-tighter text-center">Checkout</h1>
+					<p class="mb-4 text-base font-bold tracking-tighter text-center">Checkout</p>
 				</div>
 				<p class="pl-1 text-[0.80rem] text-center mt-2 pt-2">
           <b>Pack of 5 Essays</b> - 
@@ -398,11 +400,11 @@
     {/if}
 	<Loginmodal bind:show={showLoginModal} />
 		<div id="bottomnav" class="w-full p-2 border-t-2 bg-orange-50 border-neutral-800">
-			<h1 class="px-3 pt-2 pb-1 text-xs font-normal text-center text-neutral-800">
+			<p class="px-3 pt-2 pb-1 text-xs font-normal text-center text-neutral-800">
 				In order to <b>maintain quality</b>, I can serve <b>only 5 students</b> at one time. If you
 				see a <span class="font-bold text-lime-600">green</span> slot below, <u>click</u> to book it
 				before its gone!
-			</h1>
+			</p>
 			<div class="flex items-baseline justify-center mt-1 mb-1 space-x-4">
 				{#if isLoading}
   <p>Loading...</p>

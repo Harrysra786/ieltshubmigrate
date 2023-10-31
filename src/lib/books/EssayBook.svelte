@@ -374,7 +374,7 @@ function prevEssay() {
 <div class="flex flex-wrap items-center justify-center mx-2 mt-4 max-w-[800px]">
   
 
-  <a href="/books/essaybook/read/getevaluated" class="btn4" on:click={() => localStorage.setItem('essayNum', currentIndex + 1)}>
+  <a href="/bookstore/essaybook/read/getevaluated" class="btn4" on:click={() => localStorage.setItem('essayNum', currentIndex + 1)}>
     <span class="flex justify-center justify-items-center">
       <img src="/img/bolt.svg" class="w-4 h-4 my-1 mr-4 imgshadowed invert-img" alt="Icon" />Write and Get Checked
     </span>

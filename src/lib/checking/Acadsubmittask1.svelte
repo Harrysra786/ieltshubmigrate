@@ -117,7 +117,7 @@
       >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-      src="/img/speech.svg"
+      src="/img/speech.svg" alt="speech bubble"
       class="{isClicked ? 'w-8 h-8 cursor-pointer animate-pulse' : 'w-8 h-8 cursor-pointer'}"
     />
       </button>
@@ -145,7 +145,7 @@
     >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 mx-auto mt-8 rounded-full imgshadowed"
       />
       <h1

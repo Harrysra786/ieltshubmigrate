@@ -16,12 +16,13 @@
     Difference = "";
     diff.forEach(part => {
       if (part.added) {
-        Difference += `<span class='px-1 mx-1 text-yellow-400 border-neutral-800 bg-neutral-800'>${part.value}</span>`;
-      } else if (part.removed) {
-        Difference += `<span class='px-1 mx-1 text-red-700 line-through border-neutral-800 bg-amber-300'>${part.value}</span>`;
-      } else {
-        Difference += part.value;
-      }
+  Difference += `<div style='display:inline-block; padding:0.25rem; margin:0.25rem; color:#ffffff; border-color:#1E293B; background-color:#1E293B; line-height:1.5;'>${part.value}</div>`;
+} else if (part.removed) {
+  Difference += `<div style='display:inline-block; padding:0.25rem; margin:0.25rem; color:#000000; text-decoration:line-through; border-color:#1E293B; background-color:#F4C64E; line-height:1.5;'>${part.value}</div>`;
+} else {
+  Difference += part.value;
+}
+
     });
   }
 </script>

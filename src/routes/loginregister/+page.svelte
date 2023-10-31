@@ -55,7 +55,7 @@
       <div class="relative flex items-center justify-center w-full mb-4">
         <!-- svelte-ignore a11y-missing-attribute -->
         <img
-          src="/img/Hardev Sir Avatar.png"
+          src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
           class="relative w-32 h-32 max-w-3xl mx-auto scale-up-bottom lg:max-w-none imgshadowed sm:m-0 rounded-2xl"
         />
       </div>

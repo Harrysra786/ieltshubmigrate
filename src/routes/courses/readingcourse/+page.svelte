@@ -1,7 +1,7 @@
 <script>
-    import Acadecourseinfo from "$lib/courses/readingvideos.svelte";
+    import Readingsalepage from "$lib/courses/readingsale.svelte";
   
   </script>
   
-    <Acadecourseinfo />
+    <Readingsalepage/>
   

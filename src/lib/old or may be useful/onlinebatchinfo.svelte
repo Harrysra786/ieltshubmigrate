@@ -28,7 +28,7 @@ onMount(() => {
     <div class="relative flex items-center justify-center w-full mt-7">
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 max-w-3xl mx-auto scale-up-bottom lg:max-w-none imgshadowed"
       />
     </div>

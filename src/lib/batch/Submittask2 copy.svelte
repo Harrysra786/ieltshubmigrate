@@ -143,7 +143,7 @@ function insertTranscript() {
 		  data-textarea-id="topic"
 		>
 		  <img
-			src="/img/speech.svg"
+			src="/img/speech.svg" alt="speech bubble"
 			class="{isClicked && activeElementId === 'topic' ? 'w-3 h-3 cursor-pointer animate-pulse' : 'w-3 h-3 cursor-pointer'}"
 		  />
 		</button>

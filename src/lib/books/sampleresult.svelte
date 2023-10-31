@@ -109,7 +109,7 @@ return () => unsubscribe();
   <div class="fixed top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center w-full h-screen overflow-hidden z-[51] bg-neutral-800">
     <div class="w-1/2 pt-5 pb-4 bg-white rounded-lg sm:p-6 sm:pb-4">
       <div class="flex items-center justify-center">
-        <img src="/img/Hardev Sir Avatar.png" class="w-20 h-20 icon imgshadowed" alt="Icon" />
+        <img src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir" class="w-20 h-20 icon imgshadowed" alt="Icon" />
       </div>
       <div class="mt-3 text-center sm:mt-5">
         <h3 class="px-2 text-xs font-medium leading-6 text-left text-gray-900" id="modal-title">Hello there! I understand how excited you must be to receive your corrected essay.<br> But it's still in the process of being reviewed. As soon as it's ready, you'll find it right here. Typically, this process takes between 6 and 12 hours after submission. Thanks for your patience and understanding!</h3></div></div>3
@@ -123,7 +123,7 @@ return () => unsubscribe();
     <BottomInfobox />
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 mx-auto mt-8 rounded-full imgshadowed"
       />
       <h1

@@ -1,134 +1,144 @@
 <script>
-  import { onMount } from 'svelte';
-  export let placeholder = 'Put your text here';
-  export let id = 'myTextArea';
-  export let title = 'Paragraph';
-  export let showWordCount = true;
-  export let showMic = true;
-  export let bgcolor = 'bg-[#F8F8F8]';
-  let text = '';
-  let isClicked = false;
-  let recognition;
-  let transcript = '';
-  let lastActiveElement;
-
-  onMount(() => {
-    if (window.SpeechRecognition || window.webkitSpeechRecognition) {
-      recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-      recognition.lang = 'en-US';
-      recognition.continuous = true;
-
-      recognition.onresult = (event) => {
-        transcript = Array.from(event.results)
-          .map(result => result[0])
-          .map(result => result.transcript)
-          .join('');
-        transcript = transcript; // This line is necessary to make Svelte react to the change
-      };
-
-
-      document.querySelectorAll('textarea').forEach((textarea) => {
-        textarea.addEventListener('focus', () => {
-          lastActiveElement = textarea;
-        });
-      });
-    } else {
-      console.log('Web Speech API is not supported by this browser or OS.');
-    }
-  });
-
-  function toggleClick() {
-  isClicked = !isClicked;
-  if (isClicked) {
-    lastActiveElement = document.getElementById(id);
-    recognition.start();
-  } else {
-    recognition.stop();
-  }
-}
-
-
-  function formatTranscript(transcript) {
-    return transcript.charAt(0).toUpperCase() + transcript.slice(1) + '.';
-  }
-
-  function insertTranscript() {
-    if (lastActiveElement) {
-      let formattedTranscript = formatTranscript(transcript);
-      switch (lastActiveElement.id) {
-        case id:
-          text += ' ' + formattedTranscript;
-          break;
-        default:
-          break;
-      }
-      transcript = '';
-    }
-  }
-
-  $: wordCount = text.split(' ').filter(function(n) { return n != '' }).length;
-</script>
-
-<div class="flex flex-col items-center mt-4">
-  <p class="text-sm font-semibold tracking-wide text-neutral-800">{title}</p>
-  <div class="relative md:min-w-[700px] max-w-[800px] w-11/12">
-    {#if showWordCount}
-    <p class="absolute top-[-24px] z-0 bg-neutral-700 text-[#F8F8F8] text-xs pb-4 px-2 rounded-t-md pt-1">{wordCount} words</p>
-  {/if}
+    let showLogin = true;
+    let showRegister = false;
+    let showForgot = false;
   
-    
-    <button 
-  class="absolute z-20 font-bold text-white rounded" 
-  on:click={toggleClick}
->
-{#if showMic}
-  <img
-    src="/img/newerspeech.svg"
-    class="{isClicked ? 'h-20 cursor-pointer animate-pulse' : 'h-[100px] w-[33px] cursor-pointer'}"
-  />
-  {/if}
-</button>
-
-{#if transcript}
-  <div class="absolute top-[-50px] left-0 p-2 bg-white border border-black rounded z-20">
-    <textarea 
-      bind:value={transcript} 
-      class="mb-2 text-xs border-none outline-none resize-none"
-    ></textarea>
-    <button 
-      class="text-lg font-bold text-white rounded hover:bg-neutral-700" 
-      on:click={insertTranscript}
-    >
-      🔽
-    </button>
-  </div>
-{/if}
-
-
-
-
-<textarea 
-  bind:value={text} 
-  placeholder={placeholder} 
-  class="w-full min-h-[100px] px-2 py-1 pl-8 {bgcolor} text-neutral-800 border-2 border-neutral-800 resize-y  transition-all duration-200 ease-in-out focus:border-red-800 focus:outline-none focus:scale-102 rounded text-sm z-10 relative"
-  style="height: 100px;"
-  id={id}
-  on:input="{() => wordCount = text.split(' ').filter(function(n) { return n != '' }).length}"
-></textarea>
-  </div>
-</div>
-
-<style>
-.animate-pulse {
-    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
+    function toggleView(view) {
+      showLogin = view === 'login';
+      showRegister = view === 'register';
+      showForgot = view === 'forgot';
     }
-    50% {
-        opacity: .5;
-    }
-}
-</style>
+  </script>
+  
+  <div class="flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
+    <div class="w-full max-w-md space-y-8">
+  
+      {#if showLogin}
+        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+          Sign in to your account
+        </h2>
+        
+        <form class="mt-8 space-y-6" action="#" method="POST">
+  
+          <!-- Email input -->
+          <div class="-space-y-px rounded-md shadow-sm">
+            <div>
+              <label for="email-address" class="sr-only">Email address</label>
+              <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+            </div>
+          </div>
+  
+          <!-- Password input -->
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+          </div>
+  
+          <div>
+            <button type="submit" class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              Sign in
+            </button>
+          </div>
+        </form>
+  
+      {:else if showRegister}
+  
+        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+          Create your account
+        </h2>
+        
+        <!-- Registration form -->
+        <form class="mt-8 space-y-6" action="#" method="POST">
+  
+          <!-- Name input -->
+          <div class="-space-y-px rounded-md shadow-sm">
+            <div>
+              <label for="name" class="sr-only">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name">
+            </div>
+          </div>
+          
+          <!-- Email input -->
+          <div class="-space-y-px rounded-md shadow-sm">
+            <div>
+              <label for="email-address" class="sr-only">Email address</label>
+              <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+            </div>
+          </div>
+  
+          <!-- Password input -->
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Password">
+          </div>
+  
+          <div>
+            <button type="submit" class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              Sign up
+            </button>
+          </div>
+  
+        </form>
+  
+      {:else if showForgot}
+  
+        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900">
+          Forgot your password?
+        </h2>
+        
+        <p class="mt-2 text-sm text-center text-gray-600">
+          We'll send a reset link to your inbox.
+        </p>
+        
+        <!-- Forgot password form -->
+        <form class="mt-8 space-y-6" action="#" method="POST">
+        
+          <!-- Email input -->
+          <div class="-space-y-px rounded-md shadow-sm">
+            <div>
+              <label for="email-address" class="sr-only">Email address</label>
+              <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 rounded-none appearance-none rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Email address">
+            </div>
+          </div>
+  
+          <div>
+            <button type="submit" class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                </svg>
+              </span>
+              Reset Password
+            </button>
+          </div>
+          
+        </form>
+  
+      {/if}
+  
+      <div class="mt-4 text-sm">
+        <a href="javascript:void(0)" class="font-medium text-indigo-600 hover:text-indigo-500" on:click={() => toggleView('login')}>
+          Sign in
+        </a>
+        <span class="mx-2">·</span>
+        <a href="javascript:void(0)" class="font-medium text-indigo-600 hover:text-indigo-500" on:click={() => toggleView('register')}>
+          Register
+        </a>
+        <span class="mx-2">·</span>      
+        <a href="javascript:void(0)" class="font-medium text-indigo-600 hover:text-indigo-500" on:click={() => toggleView('forgot')}>
+          Forgot password
+        </a>
+      </div>
+  
+    </div>
+  </div>

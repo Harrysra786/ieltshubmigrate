@@ -85,7 +85,10 @@
 
 </script>
 
-
+<svelte:head>
+    <title>Sample Essay Correction</title>
+    <meta name="description" content="Transparency is the rule. Check this essay correction to see what you can expect from our essay correction service." />
+  </svelte:head>
 
 
 {#if loading} <!-- If loading is true, show the loading element -->
@@ -100,49 +103,49 @@
     <button class="text-xs btn4" on:click={downloadPdf}><b>Download as PDF</b></button>
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/realavatar.png"
+        src="/img/realavatar.png" alt="Hardev Sir Avatar"
         class="relative w-24 h-24 mx-auto mt-8 rounded-lg"
       />
       <h1
         class="mx-5 mb-3 text-4xl font-bold text-center text-black my-web-font"
       >
-        Detailed Essay feedback
-      </h1>
+        Sample Essay feedback
+</h1>
 
       
       <div class="flex flex-row">
       </div>
 <div class="text-xs" readonly><!-- Doc Name will go here --></div>
-      <h1
+      <p
         class="mx-5 mb-2 font-semibold text-center text-black s1 my-web-font"
       >
        Let's start this journey of learning!
-      </h1>
+      </p>
       <div class="flex flex-row items-center mt-3 essay-Type"><img src="/img/essaytopic.svg" class="w-6 h-6 my-1 mr-3 imgshadowed" alt="Icon"> <p class="text-base font-bold">The Essay Topic</p></div>
       <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] "><div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div> <div class="px-6 py-4 topic bg-[#F8F0E3] s2 text-left">{Topic}</div></div>
 
       <div class="flex flex-row items-center mt-9 essay-Type"><img src="/img/contract.png" class="w-6 h-6 my-1 mr-2 imgshadowed" alt="Icon"> <p class="text-base font-bold">Your Essay Response</p></div>
-      <h1
+      <p
         class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font"
       >
       You do not need to read this. It is just here for reference.
-      </h1>
+      </p>
       <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] "><div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div> <div id="original" class="px-6 py-4 topic bg-[#F8F0E3] s2 text-left">{@html Essay}</div>
      
       </div>
 
       <div class="flex flex-row items-center mt-9 essay-Type"><img src="/img/ontopic.svg" class="w-6 h-6 my-1 mr-2 imgshadowed" alt="Icon"> <p class="text-base font-bold">Task Achievement</p></div>
-      <h1
+      <p
         class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font"
       >
        Let's see if any of your ideas were off-topic or not full relevant to the topic.
-      </h1>
+      </p>
       <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] "><div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div> <div class="px-6 py-4 topic bg-[#F8F0E3] s2 text-left">{Relevance}</div></div>
 
       <div class="flex flex-row items-center mt-9 essay-Type"><img src="/img/Grammar.svg" class="w-6 h-6 my-1 mr-2 imgshadowed" alt="Icon"> <p class="text-base font-bold">Grammatical And Lexical Issues</p></div>
-<h1 class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font">
+<p class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font">
   Here is an assessment of your essay purely from a grammatical and lexical (vocabulary) perspective.
-</h1>
+</p>
 <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] ">
   <div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div>
   {#if Essay && Correction}
@@ -152,28 +155,28 @@
 {/if}
 
 </div>
-<h1 class="mx-5 mt-4 text-xs font-normal text-center text-black my-web-font">
+<p class="mx-5 mt-4 text-xs font-normal text-center text-black my-web-font">
   Here is the essay after the above corrections.
-</h1>
+</p>
 <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] ">
   <div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div>
   <div id="correction" class="px-6 py-4 topic bg-[#F8F0E3] s2 text-left">{@html Correction}</div>
 </div>
 
       <div class="flex flex-row items-center mt-9 essay-Type"><img src="/img/score.svg" class="w-6 h-6 my-1 mr-2 imgshadowed" alt="Icon"> <p class="text-base font-bold">Estimated Band Score(s)</p></div>
-      <h1
+      <p
         class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font"
       >
       Based on your performance in terms of task coverage, grammatical accuracy and lexical appropriateness, here is an estimation of your score. 
-      </h1>
+      </p>
       <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] "><div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div> <div class="px-6 py-4 topic bg-[#F8F0E3] s2 text-left"><SvelteMarkdown class="prose" source={Scores} /></div></div>
       
       <div class="flex flex-row items-center mt-9 essay-Type"><img src="/img/improved.svg" class="w-6 h-6 my-1 mr-2 imgshadowed" alt="Icon"> <p class="text-base font-bold">An Improved-rewrite</p></div>
-      <h1
+      <p
         class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font"
       >
        Here are my recommendations on how you could have written the same ideas in a slightly better langauge.
-      </h1>
+      </p>
       <div class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] ">
         <div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div>
         <div class="px-6 py-4 topic bg-[#F8F0E3] s2 text-left">
@@ -182,11 +185,11 @@
       </div>
       
       <div class="flex flex-row items-center mt-9 essay-Type"><img src="/img/star.png" class="w-5 h-5 my-1 mr-2 imgshadowed" alt="Icon"> <p class="text-base font-bold">Additional Feedback</p></div>
-      <h1
+      <p
         class="mx-5 mt-1 text-xs font-normal text-center text-black my-web-font"
       >
        Here are some additional aspects of your essay you need to pay attention to.
-      </h1>
+      </p>
       <div id="additional" class="mt-2 border-2 rounded border-neutral-800 overflow-clip bg-[#F8F0E3] ">
         <div class="flex flex-row px-2 pt-3 text-base topic-Info justify-evenly bg-[#F8F0E3]"></div>
         <div class="px-6 py-4 topic bg-[#F8F0E3] s2">

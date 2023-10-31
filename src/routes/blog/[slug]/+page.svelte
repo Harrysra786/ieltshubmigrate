@@ -1,49 +1,54 @@
 <script>
   /** @type {import('./$types').PageData} */
   export let data;
+
+  console.log(data); // Add this line
 </script>
 
-<svelte:head>
-  <title>{data.post.metadata.title}</title>
-  <meta name="description" content={data.post.metadata.description}>
-</svelte:head>
-
-<section class="flex items-center justify-center">
-<article class="mt-10 max-w-[900px] mx-5 px-12 tiny:px-3 tiny:mx-1 py-6 border-2 border-dashed bg-zinc-100 shadow-black border-neutral-800">
-  <div class="h-48 bg-center bg-cover lg:h-96" style="background-image: url('{data.post.metadata.image}')"></div>
-  <div class="mt-6 text-xs font-bold text-gray-500 uppercase">
-    <span>{data.post.metadata.author}</span>
-    <span>{data.post.metadata.wordCount} words</span>
-    <span>{data.post.metadata.readingTime} min read</span>
-    <span>{data.post.metadata.starRating} stars</span>
-  </div>
-  <div class="mt-6 prose">{@html data.post.content}</div>
-  <div class="mt-6">
-    <h2>Related Posts</h2>
-    <div class="grid w-full grid-cols-1 gap-5 mx-auto md:grid-cols-2">
-      {#each data.post.relatedPosts as relatedPost}
-        <a href="/blog/{relatedPost.slug}" class="flex flex-col h-full text-gray-900 transition-all duration-100 bg-white shadow hover:shadow-lg hover:-translate-y-1 shadow-neutral-400 hover:shadow-neutral-800">
-          <div class="h-48 bg-center bg-cover lg:h-96" style="background-image: url('{relatedPost.metadata.image}')"></div>
-          <article class="flex flex-col justify-between flex-1 p-5">
-            <h1 class="text-lg text-gray-800 lg:text-xl">{relatedPost.metadata.title}</h1>
-            <p>{relatedPost.metadata.description}</p>
-            <div class="mt-8 text-xs font-bold text-gray-500 uppercase">
-              <span>{relatedPost.metadata.author}</span>
-              <span>{relatedPost.metadata.wordCount} words</span>
-              <span>{relatedPost.metadata.readingTime} min read</span>
-              <span>{relatedPost.metadata.starRating} stars</span>
+<section class="flex-row items-center justify-center mb-8 bg-white">
+  
+	<img id="postimage" class="absolute z-10 w-full opacity-75 blur-sm" src={data.props.post.Image} alt="Colors" />
+	<div class="flex items-center justify-center" />
+	<div class="flex items-center justify-center px-2 mt-3">
+		<div class="max-w-[900px] mx-5 px-12 tiny:px-3 tiny:mx-1 py-6 z-20 mt-10 bg-white rounded-t-lg">
+    <div id="topinfo" class="flex flex-col mt-4 space-x-2 tiny:space-x-0 tiny3:flex-col mb-7">
+			<h1 id="posttitle" class="py-2 mt-4 text-3xl font-extrabold text-center text-zinc-800">
+        {data.props.post.Title}
+			</h1>
+			
+				<div>
+          <div class="mt-5 mb-4">
+            <div class="flex flex-col items-center justify-center">
+              <div class="flex items-center space-x-1"></div> 
+              <div class="flex items-center">
+                <img class="object-cover w-10 h-10 mr-4 rounded-full" src="/img/SmallAvatar.webp" alt="Avatar of Writer"> 
+                <div class="text-sm">
+                  <strong class="leading-none text-gray-900" data-svelte-h="svelte-1eqnu94">Hardev Singh Sra</strong> 
+                  <p class="text-gray-600" data-svelte-h="svelte-164jorp">ielts-hub.com</p>
+                </div>
+              </div>
             </div>
-          </article>
-        </a>
-      {/each}
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-2 m-0 leading-6 text-gray-900">
+            {#if Array.isArray(data.props.post.Tags)}
+              {#each data.props.post.Tags as tag (tag)}
+                <div class="flex items-center justify-center px-3 text-xs font-normal leading-6 text-gray-800 border-t border-b-2 border-solid rounded md:rounded border-x border-zinc-300 bg-zinc-100" style="border-width: 1px 1px 2px; min-height: 2.2em; min-width: 2.2em; box-shadow: none;">
+                  {tag}
+                </div>
+              {/each}
+            {/if}
+          </div>
+
+        <div id="postmain" class="flex flex-col px-6 py-4 mt-12 space-x-2 prose tiny:space-x-0 tiny3:flex-col">
+          {@html data.props.post.Article}
+        </div>
+      </div>
     </div>
-  </div>
-  
-  
-  
-  
-</article>
 </section>
 
 
-
+<style>
+  
+  
+</style>

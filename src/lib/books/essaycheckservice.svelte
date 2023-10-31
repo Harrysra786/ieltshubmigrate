@@ -209,7 +209,7 @@
       >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-      src="/img/speech.svg"
+      src="/img/speech.svg" alt="speech bubble"
       class="{isClicked ? 'w-8 h-8 cursor-pointer animate-pulse' : 'w-8 h-8 cursor-pointer'}"
     />
       </button>
@@ -236,13 +236,13 @@
     >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 mx-auto mt-8 rounded-full imgshadowed"
       />
       <p class="text-center bb s6 max-w-[800px] mt-4 mb-6 px-5 py-6 z-50 mx-6">Hardev Sir's<br> Essay Correction Service</p>
 <EssayCred />
 
-<a href="/books/essaybook/read/getevaluated/result" class="flex items-center justify-center px-4 py-1 mt-2 mb-2 text-xs font-light text-center border rounded-md cursor-pointer justify-items-center border-neutral-800 s-26tAHspIZohb bg-stone-800 text-slate-50 imgshadowed">
+<a href="/bookstore/essaybook/read/getevaluated/result" class="flex items-center justify-center px-4 py-1 mt-2 mb-2 text-xs font-light text-center border rounded-md cursor-pointer justify-items-center border-neutral-800 s-26tAHspIZohb bg-stone-800 text-slate-50 imgshadowed">
   <img src="/img/Right click.svg" class="w-6 h-6 my-1 mr-4 imgshadowed" alt="Icon" /><b class="text-left">My Last Correction</b>
 </a>
 

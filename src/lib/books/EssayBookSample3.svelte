@@ -217,7 +217,7 @@ function prevEssay() {
 <section class="flex-row items-center justify-center my-8 bg-white">
   <div class="flex items-center justify-center">
     <BottomInfobox />
-      <p class="text-center bb s7 max-w-[800px] mt-16 mb-6 border-neutral-800 border-2 bg-zinc-100 border-dashed shadow-2xl shadow-black px-5 py-6 z-50 mx-6">The <s>Big</s>Biggest Book Of IELTS Band 9 Essays <br> <span class="px-10 text-sm font-normal text-center text-red-700">Note, this is only a sample with just 28 essays. The full book has 577 Unique Essays!!</span></p>
+      <h1 class="text-center bb s7 max-w-[800px] mt-16 mb-6 border-neutral-800 border-2 bg-zinc-100 border-dashed shadow-2xl shadow-black px-5 py-6 z-50 mx-6">The <s>Big</s>Biggest Book Of IELTS Band 9 Essays <br> <span class="px-10 text-sm font-normal text-center text-red-700">Note, this is only a sample with just 28 essays. The full book has 577 Unique Essays!!</span></h1>
       
   </div>
  
@@ -375,7 +375,7 @@ function prevEssay() {
 <div class="flex flex-wrap items-center justify-center mx-2 mt-4 max-w-[800px]">
   
 
-  <a href="/books/essaybook/read/getevaluated" class="btn4" on:click={() => localStorage.setItem('essayNum', currentIndex + 1)}>
+  <a href="/bookstore/essaybook/read/getevaluated" class="btn4" on:click={() => localStorage.setItem('essayNum', currentIndex + 1)}>
     <span class="flex justify-center justify-items-center">
       <img src="/img/bolt.svg" class="w-4 h-4 my-1 mr-4 imgshadowed invert-img" alt="Icon" />Write and Get Checked
     </span>

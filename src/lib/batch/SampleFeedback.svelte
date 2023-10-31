@@ -105,7 +105,7 @@
       >
         <!-- svelte-ignore a11y-missing-attribute -->
         <img
-          src="/img/Hardev Sir Avatar.png"
+          src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
           class="relative w-24 h-24 mx-auto mt-8 rounded-full imgshadowed"
         />
         <h1

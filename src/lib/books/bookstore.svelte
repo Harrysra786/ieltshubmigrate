@@ -76,7 +76,8 @@
   
   
   </script>
-  
+  <section class="flex flex-col items-center justify-center">
+<div class="mx-1 mt-6 px-20 tiny:px-2 max-w-[980px] text-center pt-8 pb-3 mb-5 flex flex-col border-neutral-800 border-2 border-double rounded-[0.250rem] "><img class="block w-16 h-16 mx-auto mb-1 s-pxe8EGBy05UQ" src="/img/Elearning.svg" alt="clock"> <h1 class="mx-2 tracking-wider s6 anton s-pxe8EGBy05UQ"><span class="mx-2 s5 montserrat s-pxe8EGBy05UQ">Hardev Sir's</span> <br class="s-pxe8EGBy05UQ"> Exclusive IELTS Bookstore</h1> <h3 class="mx-2 mt-2 mb-4 text-xs s-pxe8EGBy05UQ">🧰 <b>Carefully Crafted Unique Guides:</b> Your Secret Weapon for IELTS Achievement 🔑</h3> </div>
   <div class="product-card-grid px-10 max-w-[1300px]">
     {#each products as product}
       <article class="grid m-3 border-black shadow-pop-br">
@@ -101,4 +102,4 @@
       </article>
     {/each}
   </div>
-  
+</section>

@@ -56,7 +56,7 @@
 		<div class="fixed flex justify-start w-full pb-4 pr-4 top-8 inset-x-8">
 			<button
 				class="px-2 py-2 font-bold text-white rounded-full bg-neutral-500 hover:bg-neutral-800 svelte-1b2p5e6"
-				><img src="/img/speech.svg" class="w-8 h-8 cursor-pointer svelte-1b2p5e6" /></button
+				><img src="/img/speech.svg" alt="speech bubble" class="w-8 h-8 cursor-pointer svelte-1b2p5e6" /></button
 			>
 		</div>
 		<div

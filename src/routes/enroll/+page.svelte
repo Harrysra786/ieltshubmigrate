@@ -24,7 +24,7 @@
       stage++;
       if (ieltsType === 'Academic' && country === 'Others') {
         acot = true;
-      }
+      }e
       if (ieltsType === 'General' && country === 'India') {
         genin = true;
       }
@@ -45,7 +45,7 @@
     }
   </script>
   <svelte:head>
-    <title>IELTS HUB - The Bets LIVE Courses</title>
+    <title>IELTS HUB - The Best LIVE Courses</title>
     <meta name="description" content="Backed by thousands of success stories,our Offline and Online courses are here to guide you on your IELTS journey with to-the-point guidance and targeted study material." />
   </svelte:head>
   <!-- First Screen -->
@@ -54,7 +54,7 @@
     <h1 class="w-5/6 mt-3 mb-5 text-lg x-2">Please answer a few <span class="underline decoration-sky-600 decoration-4 underline-offset-4">Quick Questions</span> so that the right course and details can be suggested.</h1>
       <div class="mx-1 max-w-[980px] text-center pt-8 pb-5 flex flex-col border-neutral-800 border-2 border-double rounded-[0.250rem] shadow-md shadow-neutral-800 w-11/12 ">
         <img class="block w-16 h-16 mx-auto mb-1 imgshadowed " src="/img/Teacher.svg" alt="clock" />
-        <h1 class="mx-2 mt-3 mb-2 tracking-wider">Which <span class="underline decoration-red-800 decoration-2 underline-offset-4">IELTS Exam</span> do you plan on taking?</h1>
+        <p class="mx-2 mt-3 mb-2 tracking-wider">Which <span class="underline decoration-red-800 decoration-2 underline-offset-4">IELTS Exam</span> do you plan on taking?</p>
         <div class="flex flex-row justify-center mt-4 space-x-5">
          
           <button class="flex flex-row items-center px-3 py-2 space-x-3 text-sm rounded bg-neutral-800 text-slate-100 hover:bg-amber-300 hover:text-neutral-800" on:click={() => selectIeltsType('Academic')}>
@@ -75,7 +75,7 @@
       
     <div class="mx-1 max-w-[980px] text-center pt-8 pb-5 flex flex-col border-neutral-800 border-2 border-double rounded-[0.250rem] shadow-md shadow-neutral-800 w-11/12 ">
       <img class="block w-16 h-16 mx-auto mb-1 imgshadowed " src="/img/Teacher.svg" alt="clock" />
-      <h1 class="mx-2 mt-3 mb-2 tracking-wider">Which  <span class="underline decoration-red-800 decoration-2 underline-offset-4">Country</span> are you  <span class="underline decoration-red-800 decoration-2 underline-offset-4">Currently</span> living in?</h1>
+      <p class="mx-2 mt-3 mb-2 tracking-wider">Which  <span class="underline decoration-red-800 decoration-2 underline-offset-4">Country</span> are you  <span class="underline decoration-red-800 decoration-2 underline-offset-4">Currently</span> living in?</p>
       <div class="flex flex-row justify-center mt-4 space-x-5">
         <button class="flex flex-row items-center px-3 py-2 space-x-3 text-sm rounded bg-neutral-800 text-slate-100 hover:bg-amber-300 hover:text-neutral-800" on:click={() => selectCountry('India')}>
           <img class="block w-6 h-6 mx-auto mb-1 imgshadowed " src="/img/India.svg" alt="clock" />
@@ -95,7 +95,7 @@
      
     <div class="mx-1 max-w-[980px] text-center pt-8 pb-5 flex flex-col border-neutral-800 border-2 border-double rounded-[0.250rem] shadow-md shadow-neutral-800 w-11/12 ">
       <img class="block w-16 h-16 mx-auto mb-1 imgshadowed " src="/img/Teacher.svg" alt="clock" />
-      <h1 class="mx-2 mt-3 mb-2 tracking-wider">Which  <span class="underline decoration-red-800 decoration-2 underline-offset-4">mode of teaching</span> would you prefer?</h1>
+      <p class="mx-2 mt-3 mb-2 tracking-wider">Which  <span class="underline decoration-red-800 decoration-2 underline-offset-4">mode of teaching</span> would you prefer?</p>
       <div class="flex flex-row justify-center mt-4 space-x-5">
         <button class="flex flex-row items-center px-3 py-2 space-x-3 text-sm rounded bg-neutral-800 text-slate-100 hover:bg-amber-300 hover:text-neutral-800" on:click={() => selectCoaching('Online')}>
           <img class="block w-8 h-8 mx-auto mb-1 imgshadowed " src="/img/Dashboard.svg" alt="clock" />
@@ -119,7 +119,7 @@
         thinheading='THE Academic'
         boldheading='IELTS MASTER Course'
         claim='The most reliable and affordable IELTS classes.'
-        date='Monday, OCT 1'
+        date='Monday, OCT 23'
         time='9:00 AM to 2:00 PM'
         currency='INR'
         normalfee1='10000'
@@ -136,7 +136,7 @@
         thinheading='THE Academic'
         boldheading='IELTS MASTER Course'
         claim='The most reliable and affordable IELTS classes.'
-        date='Monday, OCT 1'
+        date='Monday, OCT 23'
         time='9:00 AM to 2:00 PM'
         currency='INR'
         normalfee1='9000'
@@ -153,7 +153,7 @@
         thinheading='THE Academic'
         boldheading='IELTS MASTER Course'
         claim='The most reliable and affordable IELTS classes.'
-        date='Monday, OCT 1'
+        date='Monday, OCT 23'
         time='9:00 AM to 2:00 PM (IST)'
         currency='USD'
         normalfee1='$150'
@@ -170,8 +170,8 @@
         thinheading='THE TARGET'
         boldheading='8777 GENERAL IELTS MASTERCLASS'
         claim='A track record of 400+ successful 8777 Results'
-        date='Monday, OCT 1'
-        time='6:00 to 9:00 PM'
+        date='Monday, OCT 30'
+        time='3:00 to 9:00 PM'
         currency='INR'
         normalfee1='12200'
         discountfee1='10000'
@@ -187,7 +187,7 @@
         thinheading='THE TARGET'
         boldheading='8777 GENERAL IELTS MASTERCLASS'
         claim='A track record of 400+ successful 8777 Results'
-        date='Monday, OCT 1'
+        date='Monday, OCT 30'
         time='6:00 to 9:00 PM'
         currency='USD'
         normalfee1='$175'

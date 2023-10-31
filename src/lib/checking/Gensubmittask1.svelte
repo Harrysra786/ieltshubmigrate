@@ -9,11 +9,13 @@
   let letter = "";
   let submitDisabled = false;
   let submitStatus = 'idle'; // 'idle' | 'sending' | 'sent'
-  let Topic = `You have been living in a rental apartment for the past year. Recently a new neighbour moved in and has been making a lot of noise, which disturbs you.
-Write a letter to the landlord. In your letter:
-explain the situation
-describe why it bothers you
-suggest a solution`;
+  let Topic = `
+  You have won tickets to a major sporting event being held in your country. Write a letter to an English-speaking friend in another country. In your letter
+
+• invite them to visit your country and come with you to the
+event
+• explain why you would like them to come
+• give details about the event`;
   let isClicked = false;
   let recognition;
   let transcript = '';
@@ -123,7 +125,7 @@ suggest a solution`;
       >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-      src="/img/speech.svg"
+      src="/img/speech.svg" alt="speech bubble"
       class="{isClicked ? 'w-8 h-8 cursor-pointer animate-pulse' : 'w-8 h-8 cursor-pointer'}"
     />
       </button>
@@ -151,7 +153,7 @@ suggest a solution`;
     >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 mx-auto mt-8 rounded-full imgshadowed"
       />
       <h1

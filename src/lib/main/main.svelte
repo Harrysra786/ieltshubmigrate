@@ -19,7 +19,7 @@
 		</div>
 		<p class="px-5 mt-6 text-center shadow-lg border-y border-y-neutral-800 ">Start Now <br><span class="text-xl imgshadowed">👇🏻</span> </p>
 <a href="/enroll" class=""><img class="flex w-56 h-56 mt-2 mb-4 cursor-pointer imgshadowed rounded border-[#F4C64E] border-4" src="/img/NewCourse.png" alt="clock"></a>
-		<h1 class="mt-8 mb-4 text-sm font-bold text-zinc-800">Take A Look At What's On Offer</h1>
+		<p class="mt-8 mb-4 text-sm font-bold text-zinc-800">Take A Look At What's On Offer</p>
 
 		<!-- 6 items - Books, Course, Corrections, Free stuff -->
 		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
@@ -27,12 +27,12 @@
 			<div
 				class="flex flex-col p-3 border border-solid rounded border-neutral-800 lg:max-w-[190px]"
 			>
-				<h1
+				<p
 					class="text-sm font-bold tracking-tighter text-center s-j1AwrB440qqP"
 					data-svelte-h="svelte-7p08mo"
 				>
 					The Bookstore
-				</h1>
+				</p>
 				<img
 					class="block w-20 h-20 mx-auto mb-4 imgshadowed s-j1AwrB440qqP"
 					src="/img/mainbookstore.svg"
@@ -47,12 +47,12 @@
 			<div
 				class="flex flex-col p-3 border border-solid rounded border-neutral-800 lg:max-w-[190px]"
 			>
-				<h1
+				<p
 					class="text-sm font-bold tracking-tighter text-center s-j1AwrB440qqP"
 					data-svelte-h="svelte-7p08mo"
 				>
 					The Courses
-				</h1>
+				</p>
 				<img
 					class="block w-20 h-20 mx-auto mb-4 imgshadowed s-j1AwrB440qqP"
 					src="/img/maincourses.svg"
@@ -68,12 +68,12 @@
 			<div
 				class="flex flex-col p-3 border border-solid rounded border-neutral-800 lg:max-w-[190px]"
 			>
-				<h1
+				<p
 					class="text-sm font-bold tracking-tighter text-center s-j1AwrB440qqP"
 					data-svelte-h="svelte-7p08mo"
 				>
 					The Corrections
-				</h1>
+				</p>
 				<img
 					class="block w-20 h-20 mx-auto mb-4 imgshadowed s-j1AwrB440qqP"
 					src="/img/maincorrections.svg"
@@ -88,12 +88,12 @@
 			<div
 				class="flex flex-col p-3 border border-solid rounded border-neutral-800 lg:max-w-[190px]"
 			>
-				<h1
+				<p
 					class="text-sm font-bold tracking-tighter text-center s-j1AwrB440qqP"
 					data-svelte-h="svelte-7p08mo"
 				>
 					Free Stuff
-				</h1>
+				</p>
 				<img
 					class="block w-20 h-20 mx-auto mb-4 imgshadowed s-j1AwrB440qqP"
 					src="/img/mainfreestuff.svg"
@@ -109,12 +109,12 @@
 			<div
 				class="flex flex-col p-3 border border-solid rounded border-neutral-800 lg:max-w-[190px]"
 			>
-				<h1
+				<p
 					class="text-sm font-bold tracking-tighter text-center s-j1AwrB440qqP"
 					data-svelte-h="svelte-7p08mo"
 				>
 					The Articles
-				</h1>
+				</p>
 				<img
 					class="block w-20 h-20 mx-auto mb-4 imgshadowed s-j1AwrB440qqP"
 					src="/img/mainarticles.svg"
@@ -129,12 +129,12 @@
 			<div
 				class="flex flex-col p-3 border border-solid rounded border-neutral-800 lg:max-w-[190px]"
 			>
-				<h1
+				<p
 					class="text-sm font-bold tracking-tighter text-center s-j1AwrB440qqP"
 					data-svelte-h="svelte-7p08mo"
 				>
 					Telegram Group
-				</h1>
+				</p>
 				<img
 					class="block w-20 h-20 mx-auto mb-4 imgshadowed s-j1AwrB440qqP"
 					src="/img/maintelegram.svg"
@@ -198,7 +198,7 @@
 				</div>
 			</div>
 		</div>
-		<img src="/img/commecting line.svg" class="mt-4 grayscale" />
+		<img src="/img/commecting line.svg" class="mt-4 grayscale" alt="Grayscale image of connecting lines" />
 		<div
 			class="flex flex-col items-center w-full p-4 leading-7 text-center md:flex-row text-neutral-800 max-w-[950px] mt-2"
 			style="border-radius: 50px 50px 0px 0px;"
@@ -260,7 +260,7 @@
 				</div>
 			</div>
 		</div>
-		<img src="/img/commecting line.svg" class="mt-4 rotate-180 grayscale" />
+		<img src="/img/commecting line.svg" class="mt-4 grayscale" alt="Grayscale image of connecting lines" />
 
 		<div
 			class="flex flex-col items-center w-full p-4 leading-7 text-center md:flex-row text-neutral-800 max-w-[950px]"

@@ -52,7 +52,7 @@ async function handlePaymentSuccess() {
       <span class="flex items-center justify-center"><Paynow on:paymentSuccess={handlePaymentSuccess} productName="10 Essay Correction Pack" price="999" /></span>
       <span class="flex items-center justify-center mt-4"> 
         <div class="btn4">
-    <a href="/books/essaybook/read/getevaluated/sampleresult" class="flex items-center justify-center text-xs justify-items-center">
+    <a href="/bookstore/essaybook/read/getevaluated/sampleresult" class="flex items-center justify-center text-xs justify-items-center">
       <img src="/img/essaysample.svg" class="w-6 h-6 my-1 mr-4 imgshadowed invert-img" alt="Icon" /><b class="text-left">Click here to see a sample correction</b>
     </a></div>
 </span>

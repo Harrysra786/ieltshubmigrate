@@ -7,10 +7,12 @@
 let letter = "";
 let submitDisabled = false;
 let submitStatus = 'idle'; // 'idle' | 'sending' | 'sent'
-  let Topic = `Your neighbours have recently written to you to complain about the noise from your house or flat. Write a letter to your neighbours. In your letter,
-* Explain the reasons for the noise 
-* apologize
-* describe what action you will take
+  let Topic = `You have won tickets to a major sporting event being held in your country. Write a letter to an English-speaking friend in another country. In your letter
+
+• invite them to visit your country and come with you to the
+event
+• explain why you would like them to come
+• give details about the event
 `;
   let isClicked = false;
   let recognition;
@@ -123,7 +125,7 @@ let submitStatus = 'idle'; // 'idle' | 'sending' | 'sent'
       >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-      src="/img/speech.svg"
+      src="/img/speech.svg" alt="speech bubble"
       class="{isClicked ? 'w-8 h-8 cursor-pointer animate-pulse' : 'w-8 h-8 cursor-pointer'}"
     />
       </button>
@@ -151,7 +153,7 @@ let submitStatus = 'idle'; // 'idle' | 'sending' | 'sent'
     >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 mx-auto mt-8 rounded-full imgshadowed"
       />
       <h1
@@ -163,7 +165,12 @@ let submitStatus = 'idle'; // 'idle' | 'sending' | 'sent'
       <p id="topic"
       class="w-11/12 p-4 mt-2 mb-5 font-semibold text-center border-2 border-solid rounded mx-7 border-neutral-800 bg-amber-50"
     >
-      {Topic}
+    You have won tickets to a major sporting event being held in your country. Write a letter to an English-speaking friend in another country. In your letter
+
+    • invite them to visit your country and come with you to the
+    event
+    • explain why you would like them to come
+    • give details about the event
     </p>
     <!-- Removed form inputs for name and email -->
 <div class="flex-col self-end w-11/12">

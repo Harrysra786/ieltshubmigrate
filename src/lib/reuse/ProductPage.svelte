@@ -87,7 +87,7 @@
           <div class="relative flex items-center justify-center w-full mb-4">
           <!-- svelte-ignore a11y-missing-attribute -->
           <img
-          src="/img/Hardev Sir Avatar.png"
+          src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
           class="relative w-16 h-16 max-w-3xl mx-auto scale-up-bottom lg:max-w-none imgshadowed sm:m-0 rounded-2xl"
         />
       </div>
@@ -115,7 +115,7 @@
     <section class="w-full flex justify-center border-black border-[1px] rounded-t-xl overflow-clip max-w-[1420px] mx-7">
     
       <!-- svelte-ignore a11y-missing-attribute -->
-      <img src="{productImage}" class="w-full max-w-[1420px]">
+      <img src="{productImage}" class="w-full max-w-[1420px]" alt="product image">
     </section>
     
     
@@ -126,7 +126,7 @@
         <div class="flex-grow w-3/4 tiny:w-full">  
     
     
-          <p class="flex font-extrabold text-2xl justify-center border-black border-b-[1px] px-10 py-7 text-center tiny:border-t-[1px]">{productTitle}</p>
+          <h1 class="flex font-extrabold text-2xl justify-center border-black border-b-[1px] px-10 py-7 text-center tiny:border-t-[1px]">{productTitle}</h1>
     
     <div class="flex items-center justify-evenly">
       
@@ -134,7 +134,7 @@
 
       <div class="border-l-[1px] border-black h-20"></div>
       <!-- svelte-ignore a11y-missing-attribute -->
-      <p class="px-4 py-2 text-base font-semibold text-center"><img src="/img/Hardev Sir Avatar.png" class="w-6 rounded-full avatar online "> Hardev Singh</p>
+      <p class="px-4 py-2 text-base font-semibold text-center"><img src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir" class="w-6 rounded-full avatar online "> Hardev Singh</p>
       <div class="border-l-[1px] border-black h-20"></div>
       <p class="px-4 py-2 text-base font-semibold text-center">⭐⭐⭐⭐⭐ {Ratingsnumber}</p>
       
@@ -162,7 +162,7 @@
       <div class="relative flex items-center justify-center w-full mb-4">
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-      src="/img/Hardev Sir Avatar.png"
+      src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
       class="relative w-16 h-16 max-w-3xl mx-auto scale-up-bottom lg:max-w-none imgshadowed sm:m-0 rounded-2xl"
     />
   </div>

@@ -20,7 +20,7 @@ This component gives a direct link to students to access all the study material.
        // More data...
    ];
    onMount(async () => {
-    videos = await fetchVideos('Genvideos', 'Reading');
+    videos = await fetchVideos('Genevideos', 'Reading');
   });
 
    </script>

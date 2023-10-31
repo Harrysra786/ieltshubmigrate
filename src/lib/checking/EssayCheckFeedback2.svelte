@@ -135,7 +135,7 @@ onDestroy(() => {
     <button class="text-xs btn4" on:click={downloadPdf}><b>Download as PDF</b></button>
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/realavatar.png"
+        src="/img/realavatar.png" alt="Hardev Sir Avatar"
         class="relative w-24 h-24 mx-auto mt-8 rounded-lg"
       />
       <h1

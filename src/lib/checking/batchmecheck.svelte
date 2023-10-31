@@ -154,7 +154,7 @@
       >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-      src="/img/speech.svg"
+      src="/img/speech.svg" alt="speech bubble"
       class="{isClicked ? 'w-8 h-8 cursor-pointer animate-pulse' : 'w-8 h-8 cursor-pointer'}"
     />
       </button>
@@ -178,7 +178,7 @@
     >
       <!-- svelte-ignore a11y-missing-attribute -->
       <img
-        src="/img/Hardev Sir Avatar.png"
+        src="/img/Hardev Sir Avatar.png" alt="Avatar of Hardev Sir"
         class="relative w-24 h-24 mx-auto mt-6 rounded-full imgshadowed"
       />
       <p class="text-center bb s6 max-w-[800px] mt-4 mb-3 px-5 py-6 z-50 mx-6">Hardev Sir's<br> Essay Submission Tool</p>
